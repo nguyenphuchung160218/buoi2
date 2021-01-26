@@ -1,24 +1,55 @@
 import logo from './logo.svg';
 import './App.css';
+import avatar from './avatar.jpg';
+
 
 function App() {
+  
+    const like = [
+      {
+		sothich: 'Bong da',
+		content: 'Choi rat gioi',
+		cate: 'Tien dao',
+      },
+      {
+        sothich: 'Am nhac',
+		content: 'Choi rat gioi',
+		cate: 'Guitar',
+      },
+	];
+	const myName = 'Nguyen Phuc Hung';
+    const element = like.map((like,index) => {
+      return(
+        <div class="content">
+            <div class="content1">
+              <h4>{ like.sothich }</h4>
+			  <p>{ like.cate }</p>
+			  <p>{ like.content }</p>
+            </div>
+          </div>
+      );    
+    });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div class="main">
+		<div class="left">
+			<div class="image">
+				<img src="{ avatar }" alt="" width="100%" height="243px"/>
+			</div>
+			<div class="text">
+				<h1><strong>Hello</strong></h1>
+				<h2>My Name is { myName }</h2>
+			</div>
+		</div>
+		<div class="right">
+			<div class="title">
+				<h1>Introducing Yourself Self</h1>
+				<h1>Introducing with Text Boxes</h1>
+			</div>
+			<div class="all-content">
+       			 {element}
+			</div>
+		</div>
+	</div>     
   );
 }
 
