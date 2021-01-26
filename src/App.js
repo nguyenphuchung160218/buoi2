@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
-import avatar from './avatar.jpg';
+
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
     <div class="main">
 		<div class="left">
 			<div class="image">
-				<img src="{ avatar }" alt="" width="100%" height="243px"/>
+				<img src="" alt="" width="100%" height="243px"/>
 			</div>
 			<div class="text">
 				<h1><strong>Hello</strong></h1>
